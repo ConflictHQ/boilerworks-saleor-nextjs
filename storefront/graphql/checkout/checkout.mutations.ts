@@ -7,14 +7,8 @@ import { CHECKOUT_FRAGMENT } from "./checkout.queries";
 
 export const CREATE_CHECKOUT = gql`
   ${CHECKOUT_FRAGMENT}
-  mutation CreateCheckout(
-    $channel: String!
-    $email: String
-    $lines: [CheckoutLineInput!]!
-  ) {
-    checkoutCreate(
-      input: { channel: $channel, email: $email, lines: $lines }
-    ) {
+  mutation CreateCheckout($channel: String!, $email: String, $lines: [CheckoutLineInput!]!) {
+    checkoutCreate(input: { channel: $channel, email: $email, lines: $lines }) {
       checkout {
         ...CheckoutFields
       }
@@ -29,10 +23,7 @@ export const CREATE_CHECKOUT = gql`
 
 export const ADD_CHECKOUT_LINES = gql`
   ${CHECKOUT_FRAGMENT}
-  mutation AddCheckoutLines(
-    $checkoutId: ID!
-    $lines: [CheckoutLineInput!]!
-  ) {
+  mutation AddCheckoutLines($checkoutId: ID!, $lines: [CheckoutLineInput!]!) {
     checkoutLinesAdd(id: $checkoutId, lines: $lines) {
       checkout {
         ...CheckoutFields
@@ -48,10 +39,7 @@ export const ADD_CHECKOUT_LINES = gql`
 
 export const UPDATE_CHECKOUT_LINE = gql`
   ${CHECKOUT_FRAGMENT}
-  mutation UpdateCheckoutLine(
-    $checkoutId: ID!
-    $lines: [CheckoutLineUpdateInput!]!
-  ) {
+  mutation UpdateCheckoutLine($checkoutId: ID!, $lines: [CheckoutLineUpdateInput!]!) {
     checkoutLinesUpdate(id: $checkoutId, lines: $lines) {
       checkout {
         ...CheckoutFields
@@ -83,14 +71,8 @@ export const DELETE_CHECKOUT_LINES = gql`
 
 export const SET_CHECKOUT_SHIPPING_ADDRESS = gql`
   ${CHECKOUT_FRAGMENT}
-  mutation SetCheckoutShippingAddress(
-    $checkoutId: ID!
-    $address: AddressInput!
-  ) {
-    checkoutShippingAddressUpdate(
-      id: $checkoutId
-      shippingAddress: $address
-    ) {
+  mutation SetCheckoutShippingAddress($checkoutId: ID!, $address: AddressInput!) {
+    checkoutShippingAddressUpdate(id: $checkoutId, shippingAddress: $address) {
       checkout {
         ...CheckoutFields
       }
@@ -105,14 +87,8 @@ export const SET_CHECKOUT_SHIPPING_ADDRESS = gql`
 
 export const SET_CHECKOUT_BILLING_ADDRESS = gql`
   ${CHECKOUT_FRAGMENT}
-  mutation SetCheckoutBillingAddress(
-    $checkoutId: ID!
-    $address: AddressInput!
-  ) {
-    checkoutBillingAddressUpdate(
-      id: $checkoutId
-      billingAddress: $address
-    ) {
+  mutation SetCheckoutBillingAddress($checkoutId: ID!, $address: AddressInput!) {
+    checkoutBillingAddressUpdate(id: $checkoutId, billingAddress: $address) {
       checkout {
         ...CheckoutFields
       }
@@ -127,14 +103,8 @@ export const SET_CHECKOUT_BILLING_ADDRESS = gql`
 
 export const SET_CHECKOUT_SHIPPING_METHOD = gql`
   ${CHECKOUT_FRAGMENT}
-  mutation SetCheckoutShippingMethod(
-    $checkoutId: ID!
-    $deliveryMethodId: ID!
-  ) {
-    checkoutDeliveryMethodUpdate(
-      id: $checkoutId
-      deliveryMethodId: $deliveryMethodId
-    ) {
+  mutation SetCheckoutShippingMethod($checkoutId: ID!, $deliveryMethodId: ID!) {
+    checkoutDeliveryMethodUpdate(id: $checkoutId, deliveryMethodId: $deliveryMethodId) {
       checkout {
         ...CheckoutFields
       }

@@ -6,8 +6,8 @@
     "dev": "next dev --webpack --hostname 0.0.0.0 --port 3000",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint && prettier --check .",
-    "lint:fix": "next lint --fix && prettier --write .",
+    "lint": "eslint . && prettier --check .",
+    "lint:fix": "eslint --fix . && prettier --write .",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "test": "playwright test",
@@ -61,6 +61,7 @@
     "prettier": "^3",
     "prettier-plugin-tailwindcss": "^0.6",
     "tailwindcss": "^4",
-    "typescript": "^5"
+    "typescript": "^5",
+    "typescript-eslint": "^8.57.2"
   }
 }

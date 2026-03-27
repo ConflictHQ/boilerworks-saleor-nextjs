@@ -24,7 +24,7 @@ export function MobileMenu() {
           <SheetTitle>
             <Link
               href="/"
-              className="flex items-center gap-2 text-lg font-bold text-primary"
+              className="text-primary flex items-center gap-2 text-lg font-bold"
               onClick={() => setOpen(false)}
             >
               <StoreIcon className="h-5 w-5" />
@@ -35,21 +35,21 @@ export function MobileMenu() {
         <nav className="mt-6 flex flex-col gap-4">
           <Link
             href="/products"
-            className="text-base font-medium text-foreground"
+            className="text-foreground text-base font-medium"
             onClick={() => setOpen(false)}
           >
             {t("products")}
           </Link>
           <Link
             href="/categories"
-            className="text-base font-medium text-foreground"
+            className="text-foreground text-base font-medium"
             onClick={() => setOpen(false)}
           >
             {t("categories")}
           </Link>
           <Link
             href="/collections"
-            className="text-base font-medium text-foreground"
+            className="text-foreground text-base font-medium"
             onClick={() => setOpen(false)}
           >
             {t("collections")}
@@ -59,21 +59,21 @@ export function MobileMenu() {
 
           <Link
             href="/account"
-            className="text-base font-medium text-foreground"
+            className="text-foreground text-base font-medium"
             onClick={() => setOpen(false)}
           >
             {t("account")}
           </Link>
           <Link
             href="/account/orders"
-            className="text-base font-medium text-muted-foreground"
+            className="text-muted-foreground text-base font-medium"
             onClick={() => setOpen(false)}
           >
             {t("orders")}
           </Link>
           <Link
             href="/cart"
-            className="text-base font-medium text-foreground"
+            className="text-foreground text-base font-medium"
             onClick={() => setOpen(false)}
           >
             {t("cart")}

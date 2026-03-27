@@ -28,18 +28,17 @@ export default async function SearchPage({ searchParams }: SearchPageProps) {
         query: query.trim(),
       },
     });
-    products =
-      data?.products?.edges?.map((edge: { node: any }) => edge.node) ?? [];
+    products = data?.products?.edges?.map((edge: { node: any }) => edge.node) ?? [];
   }
 
   return (
     <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
       <div className="mb-8">
-        <h1 className="text-3xl font-bold text-foreground">
+        <h1 className="text-foreground text-3xl font-bold">
           {query ? `Results for "${query}"` : "Search"}
         </h1>
         {query && (
-          <p className="mt-2 text-muted-foreground">
+          <p className="text-muted-foreground mt-2">
             {products.length} product{products.length !== 1 ? "s" : ""} found
           </p>
         )}

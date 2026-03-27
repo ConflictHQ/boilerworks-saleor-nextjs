@@ -21,9 +21,7 @@ export default async function ConfirmationPage({ searchParams }: ConfirmationPag
         <CardContent className="flex flex-col items-center space-y-6 p-8 text-center">
           <CheckCircle2 className="h-16 w-16 text-green-500" />
           <h1 className="text-2xl font-bold">Order Placed!</h1>
-          {orderNumber && (
-            <p className="text-muted-foreground">Order #{orderNumber}</p>
-          )}
+          {orderNumber && <p className="text-muted-foreground">Order #{orderNumber}</p>}
           <p className="text-muted-foreground">
             Thank you for your order. You will receive a confirmation email shortly.
           </p>

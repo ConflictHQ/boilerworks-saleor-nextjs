@@ -123,7 +123,7 @@ export default function RegisterPage() {
           <Button type="submit" className="w-full" disabled={loading}>
             {loading ? "Creating account..." : t("register")}
           </Button>
-          <p className="text-center text-sm text-muted-foreground">
+          <p className="text-muted-foreground text-center text-sm">
             {t("hasAccount")}{" "}
             <Link href="/login" className="text-primary hover:underline">
               {t("login")}

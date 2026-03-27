@@ -98,7 +98,7 @@
   "search": {
     "placeholder": "搜索商品...",
     "title": "搜索结果",
-    "resultsFor": ""{query}"的搜索结果"
+    "resultsFor": "\u201C{query}\u201D的搜索结果"
   },
   "footer": {
     "about": "关于我们",

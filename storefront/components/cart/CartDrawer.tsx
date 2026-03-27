@@ -63,7 +63,7 @@ export function CartDrawer({ children }: CartDrawerProps) {
                     totalPrice?: { gross: { amount: number; currency: string } };
                   }) => (
                     <div key={line.id} className="flex gap-4">
-                      <div className="h-20 w-20 flex-shrink-0 overflow-hidden rounded-md border bg-muted">
+                      <div className="bg-muted h-20 w-20 flex-shrink-0 overflow-hidden rounded-md border">
                         {line.variant.product.thumbnail?.url ? (
                           <Image
                             src={line.variant.product.thumbnail.url}
@@ -73,7 +73,7 @@ export function CartDrawer({ children }: CartDrawerProps) {
                             className="h-full w-full object-cover"
                           />
                         ) : (
-                          <div className="flex h-full w-full items-center justify-center text-xs text-muted-foreground">
+                          <div className="text-muted-foreground flex h-full w-full items-center justify-center text-xs">
                             No image
                           </div>
                         )}
@@ -82,13 +82,13 @@ export function CartDrawer({ children }: CartDrawerProps) {
                         <div>
                           <Link
                             href={`/products/${line.variant.product.slug}`}
-                            className="text-sm font-medium hover:text-primary"
+                            className="hover:text-primary text-sm font-medium"
                             onClick={() => setOpen(false)}
                           >
                             {line.variant.product.name}
                           </Link>
                           {line.variant.name !== line.variant.product.name && (
-                            <p className="text-xs text-muted-foreground">{line.variant.name}</p>
+                            <p className="text-muted-foreground text-xs">{line.variant.name}</p>
                           )}
                         </div>
                         <div className="flex items-center justify-between">
@@ -113,7 +113,7 @@ export function CartDrawer({ children }: CartDrawerProps) {
                             <Button
                               variant="ghost"
                               size="icon"
-                              className="h-7 w-7 text-destructive"
+                              className="text-destructive h-7 w-7"
                               onClick={() => removeFromCart(line.id)}
                             >
                               <Trash2 className="h-3 w-3" />

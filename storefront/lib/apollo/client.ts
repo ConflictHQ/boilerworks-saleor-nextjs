@@ -1,9 +1,9 @@
 import { ApolloClient, InMemoryCache, createHttpLink } from "@apollo/client";
 import { registerApolloClient } from "@apollo/client-integration-nextjs";
-import { SALEOR_API_URL } from "@/lib/constants";
+import { SALEOR_API_URL_SSR } from "@/lib/constants";
 
 const httpLink = createHttpLink({
-  uri: SALEOR_API_URL,
+  uri: SALEOR_API_URL_SSR,
   credentials: "include",
 });
 

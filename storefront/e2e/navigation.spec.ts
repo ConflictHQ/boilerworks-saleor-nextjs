@@ -32,7 +32,10 @@ test.describe("Navigation", () => {
     await page.goto("/categories");
 
     const header = page.locator("header");
-    await header.locator("nav").getByRole("link", { name: /products/i }).click();
+    await header
+      .locator("nav")
+      .getByRole("link", { name: /products/i })
+      .click();
     await expect(page).toHaveURL(/\/products/);
   });
 

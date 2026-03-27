@@ -55,10 +55,9 @@ export const useCheckout = (id: string | null) => {
 // ---------------------------------------------------------------------------
 
 export const useCreateCheckout = () => {
-  const [createCheckout, result] = useMutation<
-    CreateCheckoutData,
-    CreateCheckoutVariables
-  >(CREATE_CHECKOUT);
+  const [createCheckout, result] = useMutation<CreateCheckoutData, CreateCheckoutVariables>(
+    CREATE_CHECKOUT,
+  );
 
   const execute = (lines: CheckoutLineInput[], email?: string) =>
     createCheckout({
@@ -73,10 +72,9 @@ export const useCreateCheckout = () => {
 };
 
 export const useAddCheckoutLines = () => {
-  const [addLines, result] = useMutation<
-    AddCheckoutLinesData,
-    AddCheckoutLinesVariables
-  >(ADD_CHECKOUT_LINES);
+  const [addLines, result] = useMutation<AddCheckoutLinesData, AddCheckoutLinesVariables>(
+    ADD_CHECKOUT_LINES,
+  );
 
   const execute = (checkoutId: string, lines: CheckoutLineInput[]) =>
     addLines({
@@ -87,15 +85,11 @@ export const useAddCheckoutLines = () => {
 };
 
 export const useUpdateCheckoutLine = () => {
-  const [updateLine, result] = useMutation<
-    UpdateCheckoutLineData,
-    UpdateCheckoutLineVariables
-  >(UPDATE_CHECKOUT_LINE);
+  const [updateLine, result] = useMutation<UpdateCheckoutLineData, UpdateCheckoutLineVariables>(
+    UPDATE_CHECKOUT_LINE,
+  );
 
-  const execute = (
-    checkoutId: string,
-    lines: Array<{ lineId: string; quantity: number }>,
-  ) =>
+  const execute = (checkoutId: string, lines: Array<{ lineId: string; quantity: number }>) =>
     updateLine({
       variables: { checkoutId, lines },
     });
@@ -104,10 +98,9 @@ export const useUpdateCheckoutLine = () => {
 };
 
 export const useDeleteCheckoutLines = () => {
-  const [deleteLines, result] = useMutation<
-    DeleteCheckoutLinesData,
-    DeleteCheckoutLinesVariables
-  >(DELETE_CHECKOUT_LINES);
+  const [deleteLines, result] = useMutation<DeleteCheckoutLinesData, DeleteCheckoutLinesVariables>(
+    DELETE_CHECKOUT_LINES,
+  );
 
   const execute = (checkoutId: string, linesIds: string[]) =>
     deleteLines({
@@ -160,10 +153,9 @@ export const useSetCheckoutShippingMethod = () => {
 };
 
 export const useSetCheckoutEmail = () => {
-  const [setEmail, result] = useMutation<
-    SetCheckoutEmailData,
-    SetCheckoutEmailVariables
-  >(SET_CHECKOUT_EMAIL);
+  const [setEmail, result] = useMutation<SetCheckoutEmailData, SetCheckoutEmailVariables>(
+    SET_CHECKOUT_EMAIL,
+  );
 
   const execute = (checkoutId: string, email: string) =>
     setEmail({
@@ -174,10 +166,9 @@ export const useSetCheckoutEmail = () => {
 };
 
 export const useCompleteCheckout = () => {
-  const [complete, result] = useMutation<
-    CompleteCheckoutData,
-    CompleteCheckoutVariables
-  >(COMPLETE_CHECKOUT);
+  const [complete, result] = useMutation<CompleteCheckoutData, CompleteCheckoutVariables>(
+    COMPLETE_CHECKOUT,
+  );
 
   const execute = (checkoutId: string) =>
     complete({

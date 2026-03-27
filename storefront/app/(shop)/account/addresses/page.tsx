@@ -197,8 +197,8 @@ export default function AddressesPage() {
                       <p className="font-medium">
                         {addr.firstName} {addr.lastName}
                       </p>
-                      <p className="text-sm text-muted-foreground">{addr.streetAddress1}</p>
-                      <p className="text-sm text-muted-foreground">
+                      <p className="text-muted-foreground text-sm">{addr.streetAddress1}</p>
+                      <p className="text-muted-foreground text-sm">
                         {addr.city}, {addr.countryArea} {addr.postalCode}
                       </p>
                     </div>

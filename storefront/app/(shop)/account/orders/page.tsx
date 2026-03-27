@@ -18,9 +18,8 @@ export default function OrdersPage() {
     fetchPolicy: "cache-and-network",
   });
 
-  const orders = data?.me?.orders?.edges?.map(
-    (edge: { node: Record<string, unknown> }) => edge.node,
-  ) ?? [];
+  const orders =
+    data?.me?.orders?.edges?.map((edge: { node: Record<string, unknown> }) => edge.node) ?? [];
 
   return (
     <div className="mx-auto max-w-4xl px-4 py-8 sm:px-6 lg:px-8">
@@ -45,7 +44,7 @@ export default function OrdersPage() {
                   <CardContent className="flex items-center justify-between p-4">
                     <div>
                       <p className="font-medium">Order #{order.number}</p>
-                      <p className="text-sm text-muted-foreground">{formatDate(order.created)}</p>
+                      <p className="text-muted-foreground text-sm">{formatDate(order.created)}</p>
                     </div>
                     <div className="flex items-center gap-4">
                       <Badge variant="secondary">{order.status}</Badge>

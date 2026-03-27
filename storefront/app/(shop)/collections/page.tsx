@@ -22,8 +22,8 @@ export default async function CollectionsPage() {
   return (
     <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
       <div className="mb-8">
-        <h1 className="text-3xl font-bold text-foreground">Collections</h1>
-        <p className="mt-2 text-muted-foreground">Curated product collections</p>
+        <h1 className="text-foreground text-3xl font-bold">Collections</h1>
+        <p className="text-muted-foreground mt-2">Curated product collections</p>
       </div>
 
       {collections.length === 0 ? (
@@ -40,7 +40,7 @@ export default async function CollectionsPage() {
             }) => (
               <Link key={collection.id} href={`/collections/${collection.slug}`}>
                 <Card className="group overflow-hidden transition-shadow hover:shadow-lg">
-                  <div className="aspect-[16/9] bg-muted">
+                  <div className="bg-muted aspect-[16/9]">
                     {collection.backgroundImage?.url ? (
                       <img
                         src={collection.backgroundImage.url}
@@ -48,19 +48,19 @@ export default async function CollectionsPage() {
                         className="h-full w-full object-cover transition-transform group-hover:scale-105"
                       />
                     ) : (
-                      <div className="flex h-full w-full items-center justify-center bg-gradient-to-br from-primary/10 to-primary/5">
-                        <span className="text-5xl font-bold text-primary/20">
+                      <div className="from-primary/10 to-primary/5 flex h-full w-full items-center justify-center bg-gradient-to-br">
+                        <span className="text-primary/20 text-5xl font-bold">
                           {collection.name[0]}
                         </span>
                       </div>
                     )}
                   </div>
                   <CardContent className="p-4">
-                    <h3 className="text-lg font-medium text-foreground group-hover:text-primary">
+                    <h3 className="text-foreground group-hover:text-primary text-lg font-medium">
                       {collection.name}
                     </h3>
                     {collection.products && (
-                      <p className="text-sm text-muted-foreground">
+                      <p className="text-muted-foreground text-sm">
                         {collection.products.totalCount} products
                       </p>
                     )}

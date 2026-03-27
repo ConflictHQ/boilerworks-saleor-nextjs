@@ -25,13 +25,12 @@ interface ProductCardProps {
 export function ProductCard({ product }: ProductCardProps) {
   const startPrice = product.pricing?.priceRange?.start?.gross;
   const stopPrice = product.pricing?.priceRange?.stop?.gross;
-  const hasRange =
-    startPrice && stopPrice && startPrice.amount !== stopPrice.amount;
+  const hasRange = startPrice && stopPrice && startPrice.amount !== stopPrice.amount;
 
   return (
     <Link href={`/products/${product.slug}`}>
       <Card className="group overflow-hidden transition-shadow hover:shadow-lg">
-        <div className="aspect-square overflow-hidden bg-muted">
+        <div className="bg-muted aspect-square overflow-hidden">
           {product.thumbnail?.url ? (
             <Image
               src={product.thumbnail.url}
@@ -41,20 +40,20 @@ export function ProductCard({ product }: ProductCardProps) {
               className="h-full w-full object-cover transition-transform group-hover:scale-105"
             />
           ) : (
-            <div className="flex h-full w-full items-center justify-center text-muted-foreground">
+            <div className="text-muted-foreground flex h-full w-full items-center justify-center">
               No image
             </div>
           )}
         </div>
         <CardContent className="p-4">
           {product.category && (
-            <p className="mb-1 text-xs text-muted-foreground">{product.category.name}</p>
+            <p className="text-muted-foreground mb-1 text-xs">{product.category.name}</p>
           )}
-          <h3 className="text-sm font-medium leading-tight text-foreground group-hover:text-primary">
+          <h3 className="text-foreground group-hover:text-primary text-sm leading-tight font-medium">
             {product.name}
           </h3>
           {startPrice && (
-            <p className="mt-2 text-sm font-semibold text-foreground">
+            <p className="text-foreground mt-2 text-sm font-semibold">
               {hasRange
                 ? `${formatPrice(startPrice.amount, startPrice.currency)} – ${formatPrice(stopPrice.amount, stopPrice.currency)}`
                 : formatPrice(startPrice.amount, startPrice.currency)}

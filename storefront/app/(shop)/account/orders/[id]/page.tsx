@@ -69,7 +69,9 @@ export default function OrderDetailPage({ params }: OrderDetailPageProps) {
                   {line.productName}
                   {line.variantName && ` - ${line.variantName}`} x{line.quantity}
                 </span>
-                <span>{formatPrice(line.totalPrice.gross.amount, line.totalPrice.gross.currency)}</span>
+                <span>
+                  {formatPrice(line.totalPrice.gross.amount, line.totalPrice.gross.currency)}
+                </span>
               </div>
             ),
           )}
@@ -92,11 +94,11 @@ export default function OrderDetailPage({ params }: OrderDetailPageProps) {
             <p>
               {order.shippingAddress.firstName} {order.shippingAddress.lastName}
             </p>
-            <p className="text-sm text-muted-foreground">
+            <p className="text-muted-foreground text-sm">
               {order.shippingAddress.streetAddress1}
               {order.shippingAddress.streetAddress2 && `, ${order.shippingAddress.streetAddress2}`}
             </p>
-            <p className="text-sm text-muted-foreground">
+            <p className="text-muted-foreground text-sm">
               {order.shippingAddress.city}, {order.shippingAddress.countryArea}{" "}
               {order.shippingAddress.postalCode}
             </p>

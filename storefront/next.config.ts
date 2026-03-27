@@ -20,10 +20,8 @@ const nextConfig: NextConfig = {
   },
   env: {
     NEXT_PUBLIC_SALEOR_API_URL:
-      process.env.NEXT_PUBLIC_SALEOR_API_URL ||
-      "http://localhost:8000/graphql/",
-    NEXT_PUBLIC_DEFAULT_CHANNEL:
-      process.env.NEXT_PUBLIC_DEFAULT_CHANNEL || "default-channel",
+      process.env.NEXT_PUBLIC_SALEOR_API_URL || "http://localhost:8000/graphql/",
+    NEXT_PUBLIC_DEFAULT_CHANNEL: process.env.NEXT_PUBLIC_DEFAULT_CHANNEL || "default-channel",
   },
 };
 

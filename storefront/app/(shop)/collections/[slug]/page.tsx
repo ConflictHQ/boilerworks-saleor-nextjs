@@ -38,9 +38,9 @@ export default async function CollectionPage({ params }: CollectionPageProps) {
   return (
     <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
       <div className="mb-8">
-        <h1 className="text-3xl font-bold text-foreground">{collection.name}</h1>
+        <h1 className="text-foreground text-3xl font-bold">{collection.name}</h1>
         {collection.description && (
-          <p className="mt-2 text-muted-foreground">{collection.description}</p>
+          <p className="text-muted-foreground mt-2">{collection.description}</p>
         )}
       </div>
       <ProductGrid products={products} />

@@ -228,9 +228,11 @@ export interface GetCategoriesData {
 }
 
 export interface GetCategoryBySlugData {
-  category: (Category & {
-    products: ProductCountableConnection;
-  }) | null;
+  category:
+    | (Category & {
+        products: ProductCountableConnection;
+      })
+    | null;
 }
 
 export interface GetCollectionsData {
@@ -241,9 +243,11 @@ export interface GetCollectionsData {
 }
 
 export interface GetCollectionBySlugData {
-  collection: (Collection & {
-    products: ProductCountableConnection;
-  }) | null;
+  collection:
+    | (Collection & {
+        products: ProductCountableConnection;
+      })
+    | null;
 }
 
 export interface SearchProductsData {

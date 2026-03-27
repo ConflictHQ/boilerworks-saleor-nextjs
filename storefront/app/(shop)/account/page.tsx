@@ -25,7 +25,7 @@ export default function AccountPage() {
     return (
       <div className="mx-auto max-w-2xl px-4 py-16 text-center sm:px-6 lg:px-8">
         <h1 className="mb-4 text-3xl font-bold">{t("title")}</h1>
-        <p className="mb-6 text-muted-foreground">Sign in to access your account.</p>
+        <p className="text-muted-foreground mb-6">Sign in to access your account.</p>
         <Button asChild>
           <Link href="/login">{tn("login")}</Link>
         </Button>
@@ -47,7 +47,7 @@ export default function AccountPage() {
         <div>
           <h1 className="text-3xl font-bold">{t("title")}</h1>
           {user && (
-            <p className="mt-1 text-muted-foreground">
+            <p className="text-muted-foreground mt-1">
               {user.firstName} {user.lastName} ({user.email})
             </p>
           )}
@@ -62,11 +62,11 @@ export default function AccountPage() {
         <Link href="/account/orders">
           <Card className="transition-shadow hover:shadow-md">
             <CardHeader className="flex flex-row items-center gap-3">
-              <Package className="h-5 w-5 text-primary" />
+              <Package className="text-primary h-5 w-5" />
               <CardTitle className="text-base">{tn("orders")}</CardTitle>
             </CardHeader>
             <CardContent>
-              <p className="text-sm text-muted-foreground">View your order history</p>
+              <p className="text-muted-foreground text-sm">View your order history</p>
             </CardContent>
           </Card>
         </Link>
@@ -74,11 +74,11 @@ export default function AccountPage() {
         <Link href="/account/addresses">
           <Card className="transition-shadow hover:shadow-md">
             <CardHeader className="flex flex-row items-center gap-3">
-              <MapPin className="h-5 w-5 text-primary" />
+              <MapPin className="text-primary h-5 w-5" />
               <CardTitle className="text-base">{tn("addresses")}</CardTitle>
             </CardHeader>
             <CardContent>
-              <p className="text-sm text-muted-foreground">Manage saved addresses</p>
+              <p className="text-muted-foreground text-sm">Manage saved addresses</p>
             </CardContent>
           </Card>
         </Link>
@@ -86,11 +86,11 @@ export default function AccountPage() {
         <Link href="/account/profile">
           <Card className="transition-shadow hover:shadow-md">
             <CardHeader className="flex flex-row items-center gap-3">
-              <User className="h-5 w-5 text-primary" />
+              <User className="text-primary h-5 w-5" />
               <CardTitle className="text-base">{tn("profile")}</CardTitle>
             </CardHeader>
             <CardContent>
-              <p className="text-sm text-muted-foreground">Update your profile</p>
+              <p className="text-muted-foreground text-sm">Update your profile</p>
             </CardContent>
           </Card>
         </Link>

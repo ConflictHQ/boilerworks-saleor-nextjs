@@ -15,30 +15,30 @@ export function Header() {
   const { totalItems } = useCart();
 
   return (
-    <header className="sticky top-0 z-40 border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+    <header className="bg-background/95 supports-[backdrop-filter]:bg-background/60 sticky top-0 z-40 border-b backdrop-blur">
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
         <div className="flex items-center gap-6">
           <MobileMenu />
-          <Link href="/" className="flex items-center gap-2 text-xl font-bold text-primary">
+          <Link href="/" className="text-primary flex items-center gap-2 text-xl font-bold">
             <StoreIcon className="h-6 w-6" />
             <span className="hidden sm:inline">Boilerworks</span>
           </Link>
           <nav className="hidden items-center gap-6 md:flex">
             <Link
               href="/products"
-              className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
+              className="text-muted-foreground hover:text-foreground text-sm font-medium transition-colors"
             >
               {t("products")}
             </Link>
             <Link
               href="/categories"
-              className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
+              className="text-muted-foreground hover:text-foreground text-sm font-medium transition-colors"
             >
               {t("categories")}
             </Link>
             <Link
               href="/collections"
-              className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
+              className="text-muted-foreground hover:text-foreground text-sm font-medium transition-colors"
             >
               {t("collections")}
             </Link>
@@ -57,7 +57,7 @@ export function Header() {
             <Button variant="ghost" size="icon" className="relative" aria-label={t("cart")}>
               <ShoppingCart className="h-5 w-5" />
               {totalItems > 0 && (
-                <span className="absolute -right-1 -top-1 flex h-5 w-5 items-center justify-center rounded-full bg-primary text-xs font-bold text-primary-foreground">
+                <span className="bg-primary text-primary-foreground absolute -top-1 -right-1 flex h-5 w-5 items-center justify-center rounded-full text-xs font-bold">
                   {totalItems}
                 </span>
               )}

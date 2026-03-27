@@ -141,9 +141,7 @@ export default function CheckoutPage() {
           <div
             key={s}
             className={`h-1 flex-1 rounded-full ${
-              step === s || (s === "address" && step === "review")
-                ? "bg-primary"
-                : "bg-muted"
+              step === s || (s === "address" && step === "review") ? "bg-primary" : "bg-muted"
             }`}
           />
         ))}
@@ -258,11 +256,11 @@ export default function CheckoutPage() {
             </CardHeader>
             <CardContent className="space-y-4">
               <div>
-                <p className="text-sm text-muted-foreground">Shipping to</p>
+                <p className="text-muted-foreground text-sm">Shipping to</p>
                 <p className="font-medium">
                   {address.firstName} {address.lastName}
                 </p>
-                <p className="text-sm text-muted-foreground">
+                <p className="text-muted-foreground text-sm">
                   {address.streetAddress1}, {address.city}, {address.countryArea}{" "}
                   {address.postalCode}
                 </p>

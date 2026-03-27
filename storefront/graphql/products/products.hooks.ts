@@ -63,17 +63,14 @@ export const useProducts = (options: UseProductsOptions = {}) => {
 // ---------------------------------------------------------------------------
 
 export const useProductBySlug = (slug: string) => {
-  return useQuery<GetProductBySlugData, GetProductBySlugVariables>(
-    GET_PRODUCT_BY_SLUG,
-    {
-      variables: {
-        slug,
-        channel: DEFAULT_CHANNEL,
-      },
-      fetchPolicy: "cache-and-network",
-      skip: !slug,
+  return useQuery<GetProductBySlugData, GetProductBySlugVariables>(GET_PRODUCT_BY_SLUG, {
+    variables: {
+      slug,
+      channel: DEFAULT_CHANNEL,
     },
-  );
+    fetchPolicy: "cache-and-network",
+    skip: !slug,
+  });
 };
 
 // ---------------------------------------------------------------------------
@@ -90,17 +87,14 @@ export const useCategories = () => {
 };
 
 export const useCategoryBySlug = (slug: string) => {
-  return useQuery<GetCategoryBySlugData, GetCategoryBySlugVariables>(
-    GET_CATEGORY_BY_SLUG,
-    {
-      variables: {
-        slug,
-        channel: DEFAULT_CHANNEL,
-      },
-      fetchPolicy: "cache-and-network",
-      skip: !slug,
+  return useQuery<GetCategoryBySlugData, GetCategoryBySlugVariables>(GET_CATEGORY_BY_SLUG, {
+    variables: {
+      slug,
+      channel: DEFAULT_CHANNEL,
     },
-  );
+    fetchPolicy: "cache-and-network",
+    skip: !slug,
+  });
 };
 
 // ---------------------------------------------------------------------------
@@ -108,29 +102,23 @@ export const useCategoryBySlug = (slug: string) => {
 // ---------------------------------------------------------------------------
 
 export const useCollections = () => {
-  return useQuery<GetCollectionsData, GetCollectionsVariables>(
-    GET_COLLECTIONS,
-    {
-      variables: {
-        channel: DEFAULT_CHANNEL,
-      },
-      fetchPolicy: "cache-and-network",
+  return useQuery<GetCollectionsData, GetCollectionsVariables>(GET_COLLECTIONS, {
+    variables: {
+      channel: DEFAULT_CHANNEL,
     },
-  );
+    fetchPolicy: "cache-and-network",
+  });
 };
 
 export const useCollectionBySlug = (slug: string) => {
-  return useQuery<GetCollectionBySlugData, GetCollectionBySlugVariables>(
-    GET_COLLECTION_BY_SLUG,
-    {
-      variables: {
-        slug,
-        channel: DEFAULT_CHANNEL,
-      },
-      fetchPolicy: "cache-and-network",
-      skip: !slug,
+  return useQuery<GetCollectionBySlugData, GetCollectionBySlugVariables>(GET_COLLECTION_BY_SLUG, {
+    variables: {
+      slug,
+      channel: DEFAULT_CHANNEL,
     },
-  );
+    fetchPolicy: "cache-and-network",
+    skip: !slug,
+  });
 };
 
 // ---------------------------------------------------------------------------
@@ -138,15 +126,12 @@ export const useCollectionBySlug = (slug: string) => {
 // ---------------------------------------------------------------------------
 
 export const useSearchProducts = (query: string) => {
-  return useQuery<SearchProductsData, SearchProductsVariables>(
-    SEARCH_PRODUCTS,
-    {
-      variables: {
-        channel: DEFAULT_CHANNEL,
-        query,
-      },
-      fetchPolicy: "cache-and-network",
-      skip: !query,
+  return useQuery<SearchProductsData, SearchProductsVariables>(SEARCH_PRODUCTS, {
+    variables: {
+      channel: DEFAULT_CHANNEL,
+      query,
     },
-  );
+    fetchPolicy: "cache-and-network",
+    skip: !query,
+  });
 };

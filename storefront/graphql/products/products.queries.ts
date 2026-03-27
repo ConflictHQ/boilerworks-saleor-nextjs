@@ -107,13 +107,7 @@ export const GET_PRODUCTS = gql`
     $filter: ProductFilterInput
     $sortBy: ProductOrder
   ) {
-    products(
-      channel: $channel
-      first: $first
-      after: $after
-      filter: $filter
-      sortBy: $sortBy
-    ) {
+    products(channel: $channel, first: $first, after: $after, filter: $filter, sortBy: $sortBy) {
       edges {
         cursor
         node {
@@ -228,12 +222,7 @@ export const GET_CATEGORIES = gql`
 
 export const GET_CATEGORY_BY_SLUG = gql`
   ${PRODUCT_PRICING_FRAGMENT}
-  query GetCategoryBySlug(
-    $slug: String!
-    $channel: String!
-    $first: Int = 12
-    $after: String
-  ) {
+  query GetCategoryBySlug($slug: String!, $channel: String!, $first: Int = 12, $after: String) {
     category(slug: $slug) {
       id
       name
@@ -313,12 +302,7 @@ export const GET_COLLECTIONS = gql`
 
 export const GET_COLLECTION_BY_SLUG = gql`
   ${PRODUCT_PRICING_FRAGMENT}
-  query GetCollectionBySlug(
-    $slug: String!
-    $channel: String!
-    $first: Int = 12
-    $after: String
-  ) {
+  query GetCollectionBySlug($slug: String!, $channel: String!, $first: Int = 12, $after: String) {
     collection(slug: $slug, channel: $channel) {
       id
       name
@@ -362,11 +346,7 @@ export const GET_COLLECTION_BY_SLUG = gql`
 export const SEARCH_PRODUCTS = gql`
   ${PRODUCT_PRICING_FRAGMENT}
   query SearchProducts($channel: String!, $first: Int = 12, $query: String!) {
-    products(
-      channel: $channel
-      first: $first
-      filter: { search: $query }
-    ) {
+    products(channel: $channel, first: $first, filter: { search: $query }) {
       edges {
         cursor
         node {

@@ -19,7 +19,7 @@ export function ProductImageGallery({ images, productName }: ProductImageGallery
 
   if (images.length === 0) {
     return (
-      <div className="flex aspect-square items-center justify-center rounded-lg bg-muted">
+      <div className="bg-muted flex aspect-square items-center justify-center rounded-lg">
         <p className="text-muted-foreground">No image available</p>
       </div>
     );
@@ -27,7 +27,7 @@ export function ProductImageGallery({ images, productName }: ProductImageGallery
 
   return (
     <div className="space-y-4">
-      <div className="aspect-square overflow-hidden rounded-lg bg-muted">
+      <div className="bg-muted aspect-square overflow-hidden rounded-lg">
         <Image
           src={images[selectedIndex].url}
           alt={images[selectedIndex].alt ?? productName}

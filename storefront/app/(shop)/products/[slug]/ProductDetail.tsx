@@ -84,14 +84,12 @@ export function ProductDetail({ product }: ProductDetailProps) {
       <ProductImageGallery images={product.images} productName={product.name} />
 
       <div className="space-y-6">
-        {product.category && (
-          <Badge variant="secondary">{product.category.name}</Badge>
-        )}
+        {product.category && <Badge variant="secondary">{product.category.name}</Badge>}
 
-        <h1 className="text-3xl font-bold text-foreground">{product.name}</h1>
+        <h1 className="text-foreground text-3xl font-bold">{product.name}</h1>
 
         {price && (
-          <p className="text-2xl font-semibold text-foreground">
+          <p className="text-foreground text-2xl font-semibold">
             {formatPrice(price.amount, price.currency)}
           </p>
         )}
@@ -116,7 +114,7 @@ export function ProductDetail({ product }: ProductDetailProps) {
         {description && (
           <div className="space-y-2">
             <h2 className="text-lg font-semibold">{t("description")}</h2>
-            <div className="prose prose-sm max-w-none text-muted-foreground dark:prose-invert">
+            <div className="prose prose-sm text-muted-foreground dark:prose-invert max-w-none">
               {description.split("\n\n").map((paragraph, i) => (
                 <p key={i}>{paragraph}</p>
               ))}

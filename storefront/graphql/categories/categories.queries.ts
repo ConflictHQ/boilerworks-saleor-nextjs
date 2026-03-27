@@ -6,12 +6,6 @@
 // that think in terms of categories rather than products.
 // ---------------------------------------------------------------------------
 
-export {
-  GET_CATEGORIES,
-  GET_CATEGORY_BY_SLUG,
-} from "../products/products.queries";
+export { GET_CATEGORIES, GET_CATEGORY_BY_SLUG } from "../products/products.queries";
 
-export {
-  useCategories,
-  useCategoryBySlug,
-} from "../products/products.hooks";
+export { useCategories, useCategoryBySlug } from "../products/products.hooks";

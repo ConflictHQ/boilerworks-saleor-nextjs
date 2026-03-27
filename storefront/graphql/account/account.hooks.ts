@@ -56,14 +56,11 @@ export const useMyOrders = (first?: number, after?: string | null) => {
 };
 
 export const useOrderByToken = (token: string) => {
-  return useQuery<GetOrderByTokenData, GetOrderByTokenVariables>(
-    GET_ORDER_BY_TOKEN,
-    {
-      variables: { token },
-      fetchPolicy: "cache-and-network",
-      skip: !token,
-    },
-  );
+  return useQuery<GetOrderByTokenData, GetOrderByTokenVariables>(GET_ORDER_BY_TOKEN, {
+    variables: { token },
+    fetchPolicy: "cache-and-network",
+    skip: !token,
+  });
 };
 
 // ---------------------------------------------------------------------------
@@ -71,10 +68,7 @@ export const useOrderByToken = (token: string) => {
 // ---------------------------------------------------------------------------
 
 export const useTokenCreate = () => {
-  const [tokenCreate, result] = useMutation<
-    TokenCreateData,
-    TokenCreateVariables
-  >(TOKEN_CREATE);
+  const [tokenCreate, result] = useMutation<TokenCreateData, TokenCreateVariables>(TOKEN_CREATE);
 
   const execute = (email: string, password: string) =>
     tokenCreate({
@@ -85,10 +79,9 @@ export const useTokenCreate = () => {
 };
 
 export const useTokenRefresh = () => {
-  const [tokenRefresh, result] = useMutation<
-    TokenRefreshData,
-    TokenRefreshVariables
-  >(TOKEN_REFRESH);
+  const [tokenRefresh, result] = useMutation<TokenRefreshData, TokenRefreshVariables>(
+    TOKEN_REFRESH,
+  );
 
   const execute = (refreshToken: string) =>
     tokenRefresh({
@@ -99,9 +92,7 @@ export const useTokenRefresh = () => {
 };
 
 export const useRegister = () => {
-  const [register, result] = useMutation<RegisterData, RegisterVariables>(
-    REGISTER,
-  );
+  const [register, result] = useMutation<RegisterData, RegisterVariables>(REGISTER);
 
   const execute = (input: {
     email: string;
@@ -125,10 +116,9 @@ export const useRegister = () => {
 // ---------------------------------------------------------------------------
 
 export const useUpdateAccount = () => {
-  const [updateAccount, result] = useMutation<
-    UpdateAccountData,
-    UpdateAccountVariables
-  >(UPDATE_ACCOUNT);
+  const [updateAccount, result] = useMutation<UpdateAccountData, UpdateAccountVariables>(
+    UPDATE_ACCOUNT,
+  );
 
   const execute = (input: { firstName?: string; lastName?: string }) =>
     updateAccount({
@@ -143,10 +133,9 @@ export const useUpdateAccount = () => {
 // ---------------------------------------------------------------------------
 
 export const useCreateAddress = () => {
-  const [createAddress, result] = useMutation<
-    CreateAddressData,
-    CreateAddressVariables
-  >(CREATE_ADDRESS);
+  const [createAddress, result] = useMutation<CreateAddressData, CreateAddressVariables>(
+    CREATE_ADDRESS,
+  );
 
   const execute = (input: AddressInput) =>
     createAddress({
@@ -157,10 +146,9 @@ export const useCreateAddress = () => {
 };
 
 export const useUpdateAddress = () => {
-  const [updateAddress, result] = useMutation<
-    UpdateAddressData,
-    UpdateAddressVariables
-  >(UPDATE_ADDRESS);
+  const [updateAddress, result] = useMutation<UpdateAddressData, UpdateAddressVariables>(
+    UPDATE_ADDRESS,
+  );
 
   const execute = (id: string, input: AddressInput) =>
     updateAddress({
@@ -171,10 +159,9 @@ export const useUpdateAddress = () => {
 };
 
 export const useDeleteAddress = () => {
-  const [deleteAddress, result] = useMutation<
-    DeleteAddressData,
-    DeleteAddressVariables
-  >(DELETE_ADDRESS);
+  const [deleteAddress, result] = useMutation<DeleteAddressData, DeleteAddressVariables>(
+    DELETE_ADDRESS,
+  );
 
   const execute = (id: string) =>
     deleteAddress({
@@ -185,10 +172,9 @@ export const useDeleteAddress = () => {
 };
 
 export const useSetDefaultAddress = () => {
-  const [setDefault, result] = useMutation<
-    SetDefaultAddressData,
-    SetDefaultAddressVariables
-  >(SET_DEFAULT_ADDRESS);
+  const [setDefault, result] = useMutation<SetDefaultAddressData, SetDefaultAddressVariables>(
+    SET_DEFAULT_ADDRESS,
+  );
 
   const execute = (id: string, type: "BILLING" | "SHIPPING") =>
     setDefault({

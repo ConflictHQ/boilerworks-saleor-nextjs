@@ -16,7 +16,7 @@ export default function CartPage() {
   if (loading) {
     return (
       <div className="mx-auto max-w-4xl px-4 py-8 sm:px-6 lg:px-8">
-        <h1 className="mb-8 text-3xl font-bold text-foreground">{t("title")}</h1>
+        <h1 className="text-foreground mb-8 text-3xl font-bold">{t("title")}</h1>
         <p className="text-muted-foreground">Loading...</p>
       </div>
     );
@@ -24,7 +24,7 @@ export default function CartPage() {
 
   return (
     <div className="mx-auto max-w-4xl px-4 py-8 sm:px-6 lg:px-8">
-      <h1 className="mb-8 text-3xl font-bold text-foreground">{t("title")}</h1>
+      <h1 className="text-foreground mb-8 text-3xl font-bold">{t("title")}</h1>
 
       {lines.length === 0 ? (
         <div className="space-y-4 text-center">
@@ -48,7 +48,7 @@ export default function CartPage() {
                 totalPrice?: { gross: { amount: number; currency: string } };
               }) => (
                 <div key={line.id} className="flex gap-4 rounded-lg border p-4">
-                  <div className="h-24 w-24 flex-shrink-0 overflow-hidden rounded-md bg-muted">
+                  <div className="bg-muted h-24 w-24 flex-shrink-0 overflow-hidden rounded-md">
                     {line.variant.product.thumbnail?.url ? (
                       <Image
                         src={line.variant.product.thumbnail.url}
@@ -58,7 +58,7 @@ export default function CartPage() {
                         className="h-full w-full object-cover"
                       />
                     ) : (
-                      <div className="flex h-full w-full items-center justify-center text-xs text-muted-foreground">
+                      <div className="text-muted-foreground flex h-full w-full items-center justify-center text-xs">
                         No image
                       </div>
                     )}
@@ -67,12 +67,12 @@ export default function CartPage() {
                     <div>
                       <Link
                         href={`/products/${line.variant.product.slug}`}
-                        className="font-medium hover:text-primary"
+                        className="hover:text-primary font-medium"
                       >
                         {line.variant.product.name}
                       </Link>
                       {line.variant.name !== line.variant.product.name && (
-                        <p className="text-sm text-muted-foreground">{line.variant.name}</p>
+                        <p className="text-muted-foreground text-sm">{line.variant.name}</p>
                       )}
                     </div>
                     <div className="flex items-center justify-between">
@@ -97,7 +97,7 @@ export default function CartPage() {
                         <Button
                           variant="ghost"
                           size="icon"
-                          className="h-8 w-8 text-destructive"
+                          className="text-destructive h-8 w-8"
                           onClick={() => removeFromCart(line.id)}
                         >
                           <Trash2 className="h-4 w-4" />
@@ -105,7 +105,10 @@ export default function CartPage() {
                       </div>
                       {line.totalPrice && (
                         <span className="font-medium">
-                          {formatPrice(line.totalPrice.gross.amount, line.totalPrice.gross.currency)}
+                          {formatPrice(
+                            line.totalPrice.gross.amount,
+                            line.totalPrice.gross.currency,
+                          )}
                         </span>
                       )}
                     </div>
