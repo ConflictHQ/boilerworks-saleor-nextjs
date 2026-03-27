@@ -1,0 +1,14 @@
+storefront/node_modules/
+storefront/.next/
+storefront/out/
+storefront/coverage/
+storefront/test-results/
+storefront/playwright-report/
+docker/saleor-db/
+docker/saleor-redis/
+.env
+.env.local
+.env.*.local
+*.pyc
+__pycache__/
+.venv/

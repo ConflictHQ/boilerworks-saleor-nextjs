@@ -1,0 +1,110 @@
+{
+  "common": {
+    "appName": "Boilerworks Tienda",
+    "loading": "Cargando...",
+    "error": "Algo salió mal",
+    "retry": "Intentar de nuevo",
+    "back": "Volver",
+    "save": "Guardar",
+    "cancel": "Cancelar",
+    "delete": "Eliminar",
+    "edit": "Editar",
+    "search": "Buscar",
+    "noResults": "No se encontraron resultados",
+    "viewAll": "Ver todo"
+  },
+  "nav": {
+    "home": "Inicio",
+    "products": "Productos",
+    "categories": "Categorías",
+    "collections": "Colecciones",
+    "cart": "Carrito",
+    "account": "Cuenta",
+    "login": "Iniciar sesión",
+    "register": "Crear cuenta",
+    "logout": "Cerrar sesión",
+    "orders": "Pedidos",
+    "addresses": "Direcciones",
+    "profile": "Perfil"
+  },
+  "product": {
+    "addToCart": "Añadir al carrito",
+    "outOfStock": "Agotado",
+    "selectVariant": "Seleccionar {attribute}",
+    "description": "Descripción",
+    "specifications": "Especificaciones",
+    "relatedProducts": "Productos relacionados",
+    "price": "Precio",
+    "from": "Desde {price}"
+  },
+  "cart": {
+    "title": "Carrito de Compras",
+    "empty": "Tu carrito está vacío",
+    "continueShopping": "Seguir comprando",
+    "subtotal": "Subtotal",
+    "shipping": "Envío",
+    "tax": "Impuesto",
+    "total": "Total",
+    "checkout": "Proceder al pago",
+    "remove": "Eliminar",
+    "quantity": "Cantidad",
+    "update": "Actualizar"
+  },
+  "checkout": {
+    "title": "Pago",
+    "shipping": "Dirección de envío",
+    "shippingMethod": "Método de envío",
+    "payment": "Pago",
+    "review": "Revisar pedido",
+    "placeOrder": "Realizar pedido",
+    "orderConfirmation": "Confirmación de pedido",
+    "orderPlaced": "¡Tu pedido ha sido realizado!",
+    "orderNumber": "Pedido #{number}",
+    "continueShopping": "Seguir comprando",
+    "guestCheckout": "Continuar como invitado",
+    "email": "Correo electrónico",
+    "firstName": "Nombre",
+    "lastName": "Apellido",
+    "address1": "Dirección línea 1",
+    "address2": "Dirección línea 2",
+    "city": "Ciudad",
+    "state": "Estado / Provincia",
+    "zip": "Código postal",
+    "country": "País",
+    "phone": "Teléfono"
+  },
+  "account": {
+    "title": "Mi Cuenta",
+    "orders": "Historial de Pedidos",
+    "noOrders": "Aún no has realizado ningún pedido.",
+    "addresses": "Direcciones Guardadas",
+    "noAddresses": "No hay direcciones guardadas.",
+    "addAddress": "Añadir dirección",
+    "defaultAddress": "Predeterminada",
+    "profile": "Perfil",
+    "updateProfile": "Actualizar perfil"
+  },
+  "auth": {
+    "login": "Iniciar sesión",
+    "register": "Crear cuenta",
+    "email": "Correo electrónico",
+    "password": "Contraseña",
+    "confirmPassword": "Confirmar contraseña",
+    "forgotPassword": "¿Olvidaste tu contraseña?",
+    "noAccount": "¿No tienes cuenta?",
+    "hasAccount": "¿Ya tienes cuenta?",
+    "invalidCredentials": "Correo o contraseña inválidos"
+  },
+  "search": {
+    "placeholder": "Buscar productos...",
+    "title": "Resultados de Búsqueda",
+    "resultsFor": "Resultados para \"{query}\""
+  },
+  "footer": {
+    "about": "Acerca de",
+    "contact": "Contacto",
+    "privacy": "Política de Privacidad",
+    "terms": "Términos de Servicio",
+    "copyright": "© {year} Boilerworks Tienda. Todos los derechos reservados."
+  }
+}

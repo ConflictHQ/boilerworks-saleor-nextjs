@@ -1,0 +1,129 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/*
+ * Boilerworks Saleor Storefront — Dark Admin Theme
+ *
+ * Brand seed colors — change these to retheme:
+ *   --brand-primary:      oklch(0.55 0.2 16)   → #DC394C
+ *   --brand-primary-dark:  oklch(0.62 0.2 16)   → brighter red for dark
+ *   --brand-text:          oklch(0.22 0.003 152) → #2B2D2C
+ *   --brand-muted:         oklch(0.41 0 0)       → #515151
+ */
+
+:root {
+  --radius: 0.625rem;
+
+  /* Light mode */
+  --background: oklch(0.99 0.002 106);
+  --foreground: oklch(0.22 0.003 152);
+
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.22 0.003 152);
+
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.22 0.003 152);
+
+  --primary: oklch(0.55 0.2 16);
+  --primary-foreground: oklch(1 0 0);
+
+  --secondary: oklch(0.96 0.005 106);
+  --secondary-foreground: oklch(0.22 0.003 152);
+
+  --muted: oklch(0.96 0.005 106);
+  --muted-foreground: oklch(0.41 0 0);
+
+  --accent: oklch(0.96 0.005 106);
+  --accent-foreground: oklch(0.22 0.003 152);
+
+  --destructive: oklch(0.55 0.2 29);
+  --destructive-foreground: oklch(1 0 0);
+
+  --border: oklch(0.91 0.005 106);
+  --input: oklch(0.91 0.005 106);
+  --ring: oklch(0.55 0.2 16);
+
+  --chart-1: oklch(0.55 0.2 16);
+  --chart-2: oklch(0.65 0.15 160);
+  --chart-3: oklch(0.55 0.12 250);
+  --chart-4: oklch(0.7 0.15 60);
+  --chart-5: oklch(0.6 0.18 300);
+}
+
+.dark {
+  --background: oklch(0.15 0.005 260);
+  --foreground: oklch(0.93 0.005 106);
+
+  --card: oklch(0.18 0.005 260);
+  --card-foreground: oklch(0.93 0.005 106);
+
+  --popover: oklch(0.18 0.005 260);
+  --popover-foreground: oklch(0.93 0.005 106);
+
+  --primary: oklch(0.62 0.2 16);
+  --primary-foreground: oklch(1 0 0);
+
+  --secondary: oklch(0.22 0.01 260);
+  --secondary-foreground: oklch(0.93 0.005 106);
+
+  --muted: oklch(0.22 0.01 260);
+  --muted-foreground: oklch(0.6 0.01 260);
+
+  --accent: oklch(0.22 0.01 260);
+  --accent-foreground: oklch(0.93 0.005 106);
+
+  --destructive: oklch(0.55 0.2 29);
+  --destructive-foreground: oklch(1 0 0);
+
+  --border: oklch(0.28 0.01 260);
+  --input: oklch(0.28 0.01 260);
+  --ring: oklch(0.62 0.2 16);
+
+  --chart-1: oklch(0.62 0.2 16);
+  --chart-2: oklch(0.7 0.15 160);
+  --chart-3: oklch(0.6 0.12 250);
+  --chart-4: oklch(0.75 0.15 60);
+  --chart-5: oklch(0.65 0.18 300);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+}
+
+body {
+  font-family:
+    var(--font-sans, ui-sans-serif),
+    system-ui,
+    -apple-system,
+    sans-serif;
+}

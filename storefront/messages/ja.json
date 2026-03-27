@@ -1,0 +1,110 @@
+{
+  "common": {
+    "appName": "Boilerworks Store",
+    "loading": "読み込み中...",
+    "error": "エラーが発生しました",
+    "retry": "再試行",
+    "back": "戻る",
+    "save": "保存",
+    "cancel": "キャンセル",
+    "delete": "削除",
+    "edit": "編集",
+    "search": "検索",
+    "noResults": "結果が見つかりませんでした",
+    "viewAll": "すべて表示"
+  },
+  "nav": {
+    "home": "ホーム",
+    "products": "商品",
+    "categories": "カテゴリー",
+    "collections": "コレクション",
+    "cart": "カート",
+    "account": "アカウント",
+    "login": "ログイン",
+    "register": "アカウント作成",
+    "logout": "ログアウト",
+    "orders": "注文履歴",
+    "addresses": "住所",
+    "profile": "プロフィール"
+  },
+  "product": {
+    "addToCart": "カートに追加",
+    "outOfStock": "在庫切れ",
+    "selectVariant": "{attribute}を選択",
+    "description": "商品説明",
+    "specifications": "仕様",
+    "relatedProducts": "関連商品",
+    "price": "価格",
+    "from": "{price}から"
+  },
+  "cart": {
+    "title": "ショッピングカート",
+    "empty": "カートは空です",
+    "continueShopping": "買い物を続ける",
+    "subtotal": "小計",
+    "shipping": "送料",
+    "tax": "税金",
+    "total": "合計",
+    "checkout": "レジに進む",
+    "remove": "削除",
+    "quantity": "数量",
+    "update": "更新"
+  },
+  "checkout": {
+    "title": "レジ",
+    "shipping": "配送先住所",
+    "shippingMethod": "配送方法",
+    "payment": "お支払い",
+    "review": "注文内容の確認",
+    "placeOrder": "注文を確定する",
+    "orderConfirmation": "注文確認",
+    "orderPlaced": "ご注文が完了しました！",
+    "orderNumber": "注文番号 #{number}",
+    "continueShopping": "買い物を続ける",
+    "guestCheckout": "ゲストとして続ける",
+    "email": "メールアドレス",
+    "firstName": "名",
+    "lastName": "姓",
+    "address1": "住所1",
+    "address2": "住所2",
+    "city": "市区町村",
+    "state": "都道府県",
+    "zip": "郵便番号",
+    "country": "国",
+    "phone": "電話番号"
+  },
+  "account": {
+    "title": "マイアカウント",
+    "orders": "注文履歴",
+    "noOrders": "まだ注文がありません。",
+    "addresses": "保存済み住所",
+    "noAddresses": "保存済みの住所がありません。",
+    "addAddress": "住所を追加",
+    "defaultAddress": "デフォルト",
+    "profile": "プロフィール",
+    "updateProfile": "プロフィールを更新"
+  },
+  "auth": {
+    "login": "ログイン",
+    "register": "アカウント作成",
+    "email": "メールアドレス",
+    "password": "パスワード",
+    "confirmPassword": "パスワードの確認",
+    "forgotPassword": "パスワードをお忘れですか？",
+    "noAccount": "アカウントをお持ちでないですか？",
+    "hasAccount": "すでにアカウントをお持ちですか？",
+    "invalidCredentials": "メールアドレスまたはパスワードが正しくありません"
+  },
+  "search": {
+    "placeholder": "商品を検索...",
+    "title": "検索結果",
+    "resultsFor": "「{query}」の検索結果"
+  },
+  "footer": {
+    "about": "会社概要",
+    "contact": "お問い合わせ",
+    "privacy": "プライバシーポリシー",
+    "terms": "利用規約",
+    "copyright": "© {year} Boilerworks Store. All rights reserved."
+  }
+}

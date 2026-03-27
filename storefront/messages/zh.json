@@ -1,0 +1,110 @@
+{
+  "common": {
+    "appName": "Boilerworks Store",
+    "loading": "加载中...",
+    "error": "出了点问题",
+    "retry": "重试",
+    "back": "返回",
+    "save": "保存",
+    "cancel": "取消",
+    "delete": "删除",
+    "edit": "编辑",
+    "search": "搜索",
+    "noResults": "未找到结果",
+    "viewAll": "查看全部"
+  },
+  "nav": {
+    "home": "首页",
+    "products": "商品",
+    "categories": "分类",
+    "collections": "合集",
+    "cart": "购物车",
+    "account": "账户",
+    "login": "登录",
+    "register": "创建账户",
+    "logout": "退出登录",
+    "orders": "订单",
+    "addresses": "地址",
+    "profile": "个人资料"
+  },
+  "product": {
+    "addToCart": "加入购物车",
+    "outOfStock": "缺货",
+    "selectVariant": "选择{attribute}",
+    "description": "商品描述",
+    "specifications": "规格参数",
+    "relatedProducts": "相关商品",
+    "price": "价格",
+    "from": "{price}起"
+  },
+  "cart": {
+    "title": "购物车",
+    "empty": "您的购物车是空的",
+    "continueShopping": "继续购物",
+    "subtotal": "小计",
+    "shipping": "运费",
+    "tax": "税费",
+    "total": "总计",
+    "checkout": "去结算",
+    "remove": "移除",
+    "quantity": "数量",
+    "update": "更新"
+  },
+  "checkout": {
+    "title": "结算",
+    "shipping": "收货地址",
+    "shippingMethod": "配送方式",
+    "payment": "支付方式",
+    "review": "确认订单",
+    "placeOrder": "提交订单",
+    "orderConfirmation": "订单确认",
+    "orderPlaced": "您的订单已提交！",
+    "orderNumber": "订单 #{number}",
+    "continueShopping": "继续购物",
+    "guestCheckout": "以游客身份继续",
+    "email": "电子邮箱",
+    "firstName": "名",
+    "lastName": "姓",
+    "address1": "地址行1",
+    "address2": "地址行2",
+    "city": "城市",
+    "state": "省份",
+    "zip": "邮政编码",
+    "country": "国家",
+    "phone": "手机号码"
+  },
+  "account": {
+    "title": "我的账户",
+    "orders": "订单历史",
+    "noOrders": "您还没有下过订单。",
+    "addresses": "已保存的地址",
+    "noAddresses": "没有已保存的地址。",
+    "addAddress": "添加地址",
+    "defaultAddress": "默认",
+    "profile": "个人资料",
+    "updateProfile": "更新资料"
+  },
+  "auth": {
+    "login": "登录",
+    "register": "创建账户",
+    "email": "电子邮箱",
+    "password": "密码",
+    "confirmPassword": "确认密码",
+    "forgotPassword": "忘记密码？",
+    "noAccount": "还没有账户？",
+    "hasAccount": "已有账户？",
+    "invalidCredentials": "邮箱或密码无效"
+  },
+  "search": {
+    "placeholder": "搜索商品...",
+    "title": "搜索结果",
+    "resultsFor": ""{query}"的搜索结果"
+  },
+  "footer": {
+    "about": "关于我们",
+    "contact": "联系我们",
+    "privacy": "隐私政策",
+    "terms": "服务条款",
+    "copyright": "© {year} Boilerworks Store. 保留所有权利。"
+  }
+}
