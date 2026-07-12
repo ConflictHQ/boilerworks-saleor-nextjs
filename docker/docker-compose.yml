@@ -1,6 +1,6 @@
 services:
   api:
-    image: ghcr.io/saleor/saleor:3.22
+    image: ghcr.io/saleor/saleor:3.23
     container_name: saleor-api
     ports:
       - "8000:8000"
@@ -76,7 +76,7 @@ services:
     restart: unless-stopped
 
   worker:
-    image: ghcr.io/saleor/saleor:3.22
+    image: ghcr.io/saleor/saleor:3.23
     container_name: saleor-worker
     command: celery -A saleor --app=saleor.celeryconf:app worker --loglevel=info -B
     env_file:
