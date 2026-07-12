@@ -25,9 +25,9 @@ We will acknowledge your report within 48 hours and aim to release a fix within 
 
 When deploying Boilerworks:
 
-- Change all default credentials (database, MinIO, session secret)
+- Set a real `SECRET_KEY` in `docker/backend.env` (the default is a placeholder)
+- Change the Postgres password (`POSTGRES_PASSWORD=saleor` in `docker/docker-compose.yml`)
+- Change or remove the seeded admin account (`admin@example.com` / `admin` from `scripts/seed.sh`)
 - Use HTTPS in production
 - Set `NODE_ENV=production`
-- Configure `CORS_ORIGINS` to your domain only
-- Use strong Auth0 credentials
 - Review the security hardening in `bootstrap.md`
