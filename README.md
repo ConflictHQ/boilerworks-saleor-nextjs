@@ -128,6 +128,7 @@ Browser
 - [bootstrap.md](bootstrap.md) -- Conventions and patterns (read first)
 - [CLAUDE.md](CLAUDE.md) -- Claude agent configuration
 - [AGENTS.md](AGENTS.md) -- Generic agent shim
+- [CALLIOPE.md](CALLIOPE.md) -- Calliope agent shim
 
 ## License
 
